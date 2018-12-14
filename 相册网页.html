@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .tm-content-box {
+            margin-top: 60px;
+        }
+
+        .tm-content-box:first-child {
+            margin-top: 0;
+        }
+
+        .tm-banner-title {
+            font-size: 3.2rem;
+            letter-spacing: 2px;
+        }
+
+        .tm-banner {
+            height: 150px;
+            padding: 0;
+        }
+        .tm-banner-inner {
+            border: 1px solid #993366;
+            height: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .tm-body {
+            width: 300px;
+            margin-top: 10px;
+            position: relative;
+            overflow-x: hidden;
+            overflow-y: auto;
+            order: -1;
+        }
+        .tm-sidebar {
+            float: none;
+            margin-bottom: 20px;
+        }
+
+        .tm-main-nav {
+            background-color: #993366;
+            font-size: 1.4rem;
+        }
+        .tm-main-nav-ul {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .tm-nav-item {
+            list-style: none;
+            width: 300px;
+        }
+        .tm-nav {
+            margin-right: 20px;
+        }
+        .tm-nav-item-link {
+            padding: 20px;
+            width: 300px;
+        }
+        .tm-nav-item-link:focus {
+            text-decoration: none;
+        }
+        .tm-button,
+        .tm-button:focus {
+            background-color: #936;
+            border: none;
+            border-radius: 0;
+            color: #fff;
+            display: block;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+        .tm-button:hover,
+        .tm-button.active {
+            background-color: #7B2852;
+            color: #EAD53D;
+            text-decoration: none;
+        }
+        .tm-nav-item {
+            list-style: none;
+            width: 300px;
+        }
+        .tm-nav-item-link {
+            padding: 30px;
+            width: 220px;
+        }
+
+        .tm-nav-item-link:focus {
+            text-decoration: none;
+        }
+        .content{
+            display: flex;
+
+        } 
+ 	    .tm-main-content {
+             position: absolute; 
+             margin-top: 32px;
+             margin-left: 320px;  
+        }
+        .tm-welcome-img{
+            position: relative;
+            width: 950px;
+            height: 450px;
+        }
+        .tm-box { 
+            max-width: 100%;
+        }
+         .tm-welcome-boxes-container {
+            align-items: center;	
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+            margin-top: 10px;
+        } 
+        .tm-welcome-text {
+            display: inline-block;
+            justify-content:space-between;
+	        background-color: rgba(221, 221, 221, 0.35);
+            padding: 20px;
+            margin: 15px;
+            max-width: 400px;
+            margin-top: 0;
+        }
+        .tm-welcome-link {
+            background-color: #993366;
+            display: block;
+            text-align: center;
+            color: white;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        .tm-content-box { margin-top: 10px; }
+        .tm-services-img { width: 300px;height: 600px;}	
+        .tm-services { overflow: auto; }
+        .tm-services-img-container { float: left; }
+        .tm-services-description-container { margin-left: 300px; }/* 图片字段右侧文字 */
+        .tm-purple-bg .tm-section-title { color: white; }
+        .tm-gray-bg { background-color: #F4F4F4; width: 950px; }
+        .tm-box-pad { padding: 45px 40px;}
+        .tm-bordered-box { border: 1px solid #993366; }
+        figure.effect-bubba {
+        background: #9e5406;
+        width:255px;
+		height:255px;
+        display: inline-block;/*自动换行*/
+        margin: 20px;
+        text-align: center;}
+        .img-fluid{
+            width: 255px;
+            height: 255px;
+        }
+        .tm-gallery{
+            width: 950px;
+
+        }
+.tm-content-box:first-child { margin-top: 0; }
+.tm-flex{display: flex;width: 950px;}
+.tm-contact-left-half, .tm-contact-right-half { 
+	        flex: 1;
+	padding: 15px;
+}
+.tm-button-normal {
+	display: inline-block;
+	font-size: 1.2rem;
+	padding: 15px 50px;    
+}
+.form-group{
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+.form-control {
+	border-radius: 0;
+	font-size: 1em;	
+}
+.tm-address-box{
+    width: 540px;
+}
+</style>
+    <script type="text/javascript">
+        var mt = 0;
+        window.onload = function () {
+            var mydiv = document.getElementById("list");
+            var mt = mydiv.offsetTop;
+            window.onscroll = function () {
+                var t = document.documentElement.scrollTop || document.body.scrollTop;
+                if (t > mt) {
+                    mydiv.style.position = "fixed";
+                    mydiv.style.top = "0";
+                    mydiv.style.right = "clear";
+                } else {
+                    mydiv.style.position = "static";
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <section id="welcome" class="tm-content-box tm-banner">
+        <div class="tm-banner-inner">
+            <h1 class="tm-banner-title">Pipeline</h1>
+        </div>
+    </section>
+    <div class="content">
+        <div id="list" class="tm-body">
+            <div class="tm-sidebar">
+                <nav class="tm-main-nav">
+                    <ul class="tm-main-nav-ul">
+                        <li class="tm-nav-item"><a href="#welcome" class="tm-nav-item-link tm-button">
+                                <i class="tm-nav"></i>Welcome</a>
+                        </li>
+                        <li class="tm-nav-item"><a href="#gallery" class="tm-nav-item-link tm-button">
+                                <i class="tm-nav"></i>Image Gallery</a>
+                        </li>
+                        <li class="tm-nav-item"><a href="#services" class="tm-nav-item-link tm-button">
+                                <i class="tm-nav"></i>Our Services</a>
+                        </li>
+                        <li class="tm-nav-item"><a href="#about" class="tm-nav-item-link tm-button">
+                                <i class="tm-nav"></i>About Company</a>
+                        </li>
+                        <li class="tm-nav-item"><a href="#contact" class="tm-nav-item-link tm-button">
+                                <i class="tm-nav"></i>Contact Us</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="tm-main-content">
+            <img src="img/1200x800-01.jpg" alt="Image 1" class="tm-welcome-img">
+            <div class="tm-box">
+                <div class="tm-welcome-boxes-container">
+                    <div class="tm-welcome-text">
+                        <h2 class="tm-welcome-title">Aliquam ante sapien</h2>
+                        <p>Vivamus eleifend ac turpis sit amet maximus. Nulla in faucibus nisl, ut ultrices magna.</p>
+                        <a href="#" class="tm-welcome-link tm-button">Learn More</a>
+                    </div>
+                    <div class="tm-welcome-text">
+                        <h2 class="tm-welcome-title">Aliquam ante sapien</h2>
+                        <p>Vivamus eleifend ac turpis sit amet maximus. Nulla in faucibus nisl, ut ultrices magna.</p>
+                        <a href="#" class="tm-welcome-link tm-button">Learn More</a>
+                    </div>
+                </div>
+                <div id="gallery" class="tm-content-box">                        
+                    <div class="tm-gallery">
+                        <figure class="effect-bubba">
+                            <img src="img/img-11-08.jpg" alt="Image 8" class="img-fluid">
+                            <figcaption>
+                                <h2>Light <span>Bridge</span></h2>
+                                <p>Fusce faucibus metus in augue in augue</p>
+                                <a href="img/img-11-08.jpg">View more</a>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="effect-bubba">
+                            <img src="img/img-11-07.jpg" alt="Image 7" class="img-fluid">
+                            <figcaption>
+                                <h2>Glass <span>Tower</span></h2>
+                                <p>Sed ut ipsum eu purus ullamcorper</p>
+                                <a href="img/img-11-07.jpg">View more</a>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="effect-bubba">
+                            <img src="img/img-11-05.jpg" alt="Image 5" class="img-fluid">
+                            <figcaption>
+                                <h2>Jump <span>Higher</span></h2>
+                                <p>Morbi fermentum eget libero sed</p>
+                                <a href="img/img-11-05.jpg">View more</a>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="effect-bubba">
+                            <img src="img/img-11-03.jpg" alt="Image 3" class="img-fluid">
+                            <figcaption>
+                                <h2>Forest <span>Park</span></h2>
+                                <p>Aenean rutrum enim a tellus suscipit</p>
+                                <a href="img/img-11-03.jpg">View more</a>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="effect-bubba">
+                            <img src="img/img-11-02.jpg" alt="Image 2" class="img-fluid">
+                            <figcaption>
+                                <h2>Ice <span>Mountain</span></h2>
+                                <p>Curabitur a ipsum eget eros sodales</p>
+                                <a href="img/img-11-02.jpg">View more</a>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="effect-bubba">
+                            <img src="img/img-11-04.jpg" alt="Image 4" class="img-fluid">
+                            <figcaption>
+                                <h2>Green <span>Field</span></h2>
+                                <p>Duis eget tortor et mauris tempus</p>
+                                <a href="img/img-11-04.jpg">View more</a>
+                            </figcaption>
+                        </figure>                                
+                    </div>
+                </div>
+
+                <div id="services" class="tm-content-box tm-gray-bg tm-services">
+
+                    <div class="tm-services-img-container">
+                        <img src="img/450x900-01.jpg" alt="Green Field" class="tm-services-img">
+                    </div>
+
+                    <div class="tm-box-pad tm-services-description-container">
+                        <h2 class="tm-section-title">Vivamus eget convallis tellus</h2>
+                        <p class="tm-section-description">Pipeline Bootstrap 4.0 Template is provided by <a href="http://templatemo.com"
+                                target="_parent">templatemo</a> website. You may use this HTML CSS template and also
+                            share it to friends. Thank you for visiting our site.</p>
+                        <p class="tm-section-description">Duis vel elit eu eros dapibus vestibulum vel vel nibh. Morbi
+                            efficitur erat nulla, id tempor mi accumsan sed. Suspendisse sollicitudin condimentum
+                            interdum. <span class="tm-blue-text">BG #F4F4F4 Button BG #936</span> <span class="tm-red-text">Button
+                                Hover BG #C33</span></p>
+                        <p class="tm-section-description">Nulla id ornare eros, at efficitur risus. Fusce sodales lorem
+                        magna, id tempor justo mattis eget. Aenean accumsan semper commodo. Aliquam ante sapien,
+                        tincidunt sed vaius et, luctus condimentum sapien.</p>
+                    </div>
+
+                </div>
+                <section id="contact" class="tm-content-box">
+                    <div class="tm-flex">
+                        <div class="tm-contact-left-half tm-gray-bg">
+                            <div class="tm-contact-inner-pad">
+                                <h2 class="tm-section-title">Contact Us</h2>
+                                <form action="#contact" method="post" class="contact-form">
+                                    <div class="form-group">
+                                        <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name"  required/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email"  required/>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea id="contact_message" name="contact_message" class="form-control" rows="9" placeholder="Message" required></textarea>
+                                    </div>
+                                    
+                                    <button type="submit" class="tm-button tm-button-normal">Submit</button>
+
+                                </form>
+                            </div>                                
+                        </div>
+                        <div class="tm-address-box">
+                            <h2 class="tm-section-title">Our Location</h2>
+                            <address>110 tellus ut fringilla ornare,<br>
+                                     velit arcu rutrum metus<br>
+                                     id elementum 10990
+                            </address>    
+                        </div>                                
+                    </div>
+                    
+                </section> 
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
